@@ -3,7 +3,7 @@
     <div class="profile-header"></div>
     <div class="profile-content">
       <% if current_user  %>
-          <%= image_tag current_user.image %>
+          <%= image_tag current_user.large_image %>
           <h1><%= current_user.name %></h1>
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       <% else %>

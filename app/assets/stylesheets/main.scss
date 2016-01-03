@@ -7,7 +7,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-family: "brandon-grotesque";
+  font-family: "open-sans";
+  text-align: justify;
+  -webkit-user-select: none;
 }
 
 body {
@@ -15,16 +17,17 @@ body {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
 h1 {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
   font-size: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
 }

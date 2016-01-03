@@ -1,0 +1,61 @@
+/* Breakpoints */
+$small: 640px;
+$medium: 920px;
+$large: 1280px;
+
+* {
+  box-sizing: border-box;
+}
+
+.container-time {
+  animation: fadeIn 2s 0.5s ease-in both;
+  width: 239px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+
+  div {
+    height: 15px;
+    margin-bottom: 18px;
+
+    @media screen and (min-width: $medium) {
+      height: 15px;
+    }
+
+    &:before {
+      animation: fadeIn 2s 2s ease-in both;
+      background: rgba(0,0,0,0.2);
+      content: " ";
+      height: 36px;
+      left: 18px;
+      position: absolute;
+      right: 18px;
+
+      @media screen and (min-width: $medium) {
+        height: 15px;
+      }
+    }
+  }
+}
+
+h1 {
+
+  @media screen and (min-width: $small) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: $medium) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

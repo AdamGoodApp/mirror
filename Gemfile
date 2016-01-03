@@ -16,6 +16,8 @@ gem 'twitter-bootstrap-rails'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'figaro'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

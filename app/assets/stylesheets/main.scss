@@ -1,7 +1,21 @@
 html, body {
   background-color: #000;
   color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
   font-family: "brandon-grotesque";
+}
+
+body {
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {

@@ -1,6 +1,7 @@
 section.profile {
   position: relative;
-  width: 325px;
+  width: 239px;
+  height: 271px;
   border: 1px solid #fff;
   border-radius: 8px;
   text-transform: uppercase;
@@ -30,23 +31,23 @@ section.profile {
 }
 
 .profile-content {
-  padding: 0 30px 30px;
+  padding: 0 15px 30px;
   border-radius: 0 0 5px 5px;
   text-align: center;
 
   img {
-    $image-size: 150px;
-    margin-top: (0 - ($image-size / 2));
+    $image-size: 100px;
+    margin-top: 20px;
     width: $image-size;
     height: $image-size;
     border: 1px solid #fff;
     border-radius: 100%;
-    background: #fff;
+    background: black;
   }
 
   h1 {
     margin: 25px 0 0;
-    font-size: 1.4em;
+    font-size: 1em;
     letter-spacing: 0.05em;
   }
 
@@ -97,13 +98,14 @@ ul {
   list-style: none;
 
   li {
-    display: flex;
+    display: inline-block;
     flex: 0 1 50%;
     justify-content: center;
     align-items: center;
     padding: 20px 10px;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 0.9em;
+    width: 112px;
 
     & + li {
       border-left: 1px solid #fff;

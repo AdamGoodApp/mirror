@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :home
   root 'home#index'
 
+  resources :home
+
+  get 'photo' => 'photo_booth#index'
   match 'weather' => 'home#weather', :via => :get, :defaults => { :format => :json }
 
   # The priority is based upon order of creation: first created -> highest priority.

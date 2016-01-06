@@ -3,7 +3,30 @@
   <p class="time"></p>
 </div>
 
-<div class="weather">
-  <canvas id="icon1" width="128" height="128"></canvas>
-  <p class="temperature"></p>
+<div id="weather_wrapper">
+  <div class="weatherCard">
+    <div class="currentTemp">
+      <span class="temp temperature"></span>
+      <span class="location">London</span>
+    </div>
+    <div class="currentWeather">
+      <canvas id="icon1" class="conditions" width="50" height="57.5"></canvas>
+    </div>
+    <div class="info">
+      <div class="tomorrow">
+        <canvas id="icon2" width="25" height="25"></canvas>
+        <div class="inner-info">
+          <span class="temperature"></span>
+          <span class="day"></span>
+        </div>
+      </div>
+      <div class="after_tomorrow">
+        <canvas id="icon3" width="25" height="25"></canvas>
+        <div class="inner-info">
+          <span class="temperature"></span>
+          <span class="day"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

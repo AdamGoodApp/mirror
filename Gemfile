@@ -20,6 +20,8 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'weather-icons-rails'
+gem 'forecast_io'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

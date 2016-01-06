@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :home
   root 'home#index'
 
+  match 'weather' => 'home#weather', :via => :get, :defaults => { :format => :json }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

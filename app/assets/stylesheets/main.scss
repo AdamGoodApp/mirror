@@ -30,4 +30,21 @@ p {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+  margin: 0;
 }
+
+.right {
+  float: right;
+}
+
+.date-time {
+  .date {
+    font-size: 1em;
+  }
+
+  .time {
+    font-size: 2em;
+  }
+}
+
+

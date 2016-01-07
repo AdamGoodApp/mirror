@@ -1,0 +1,60 @@
+$( document ).ready(function() {
+    function get_fixtures() {
+        $.ajax({
+            headers: { 'X-Auth-Token': 'a6ece2dbf05b48f58848a63ac3a4291c' },
+            url: 'http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n9',
+            dataType: 'json',
+            type: 'GET'
+        }).done(function(response) {
+            add_scores(response);
+        });
+    }
+
+    function add_scores(data){
+        var weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        $('.football').html('');
+
+        $.each(data['fixtures'], function( index, value ) {
+            var homeTeamName = value['homeTeamName'];
+            var awayTeamName = value['awayTeamName'];
+
+            if(value['status'] == "TIMED") {
+                var status = value["date"]
+            } else if(value['status'] == "FINISHED") {
+                var status = "FT"
+            } else {
+                var status = value['status']
+            }
+
+            var goalsHomeTeam = value['result']['goalsHomeTeam'] || 0;
+            var goalsAwayTeam = value['result']['goalsAwayTeam'] || 0;
+            var date = new Date(value["date"]);
+
+            var string = "<div class='fixture'>";
+            string += "<span class='home-team-name'><img src='/assets/teams/" + homeTeamName + "'></span>";
+
+            if(value['result']['goalsHomeTeam'] == null){
+                string += "<span class='fixture-date'>";
+                string += weekday[date.getDay()] + " - " + date.getHours() + ":" + date.getMinutes();
+                string += "</span>";
+            } else {
+                string += "<div class='score-info'>";
+                string += "<span class='score'>";
+                string += goalsHomeTeam + " - " + goalsAwayTeam;
+                string += "</span>";
+                string += "<span class='status'>";
+                string += status;
+                string += "</span>";
+                string += "</div>";
+            }
+
+            string += " <span class='away-team-name'><img src='/assets/teams/" + awayTeamName + "'></span>";
+            string += "</div>";
+
+            $('.football').append(string);
+        });
+    }
+
+    get_fixtures();
+    setInterval(function(){ get_fixtures(); }, 60000);
+});

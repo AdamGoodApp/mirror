@@ -1,0 +1,50 @@
+.football {
+  display: block;
+  border-top: none;
+  border-radius: 0px;
+
+  p {
+    display: block;
+  }
+
+  .fixture {
+    display: block;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+
+  .home-team-name, .score-info {
+    display: inline-block;
+  }
+
+  .home-team-name, .away-team-name {
+    width: 170px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .home-team-name {
+    text-align: right;
+  }
+
+  .away-team-name {
+
+  }
+
+  .score-info {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0px 10px;
+
+    .score, .status {
+      display: block;
+    }
+  }
+
+  .fixture-date {
+    margin: 0px 10px;
+    text-transform: uppercase;
+  }
+}

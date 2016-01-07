@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def index
+    gon.user = current_user if current_user
   end
 
   def weather

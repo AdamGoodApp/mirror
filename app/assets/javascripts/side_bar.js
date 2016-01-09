@@ -31,15 +31,35 @@ $( document ).ready(function() {
 
 
   //FAN CONTROL
+  function fanOff() {
+    $.ajax({
+      method: "GET",
+      url: "/fan-off"
+    }).done(function( msg ) {
+
+    });
+  }
+
+  function fanOn() {
+    $.ajax({
+      method: "GET",
+      url: "/fan-on"
+    }).done(function( msg ) {
+
+    });
+  }
+
   $( "#fan" ).on( "click", function(e) {
     var status = $('.fan-text').html();
 
     if (status == "" || status == "off") {
       $('.fan-text').html('on');
       $('.fan-img').removeClass('rotate');
+      fanOff();
     } else {
       $('.fan-text').html('off');
       $('.fan-img').addClass('rotate');
+      fanOn();
     }
   });
 

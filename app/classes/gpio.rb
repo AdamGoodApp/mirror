@@ -11,11 +11,11 @@ class GPIO
   end
 
   def fan_off!
-    pusher_client.trigger('mirror', 'gpio_message', {pin: 18, state: 'on'})
+    pusher_client.trigger('mirror', 'gpio_message', {pin: 18, state: 'off'})
   end
 
   def fan_on!
-    pusher_client.trigger('mirror', 'gpio_message', {pin: 18, state: 'off'})
+    pusher_client.trigger('mirror', 'gpio_message', {pin: 18, state: 'on'})
   end
 
 end

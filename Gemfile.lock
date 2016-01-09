@@ -74,6 +74,7 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.0)
+    curb (0.8.8)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -101,6 +102,12 @@ GEM
       multi_json
       request_store (>= 1.0)
     hashie (3.4.3)
+    httpclient (2.7.0.1)
+    hue (0.1.5)
+      curb
+      json
+      log_switch (= 0.4.0)
+      thor
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -111,6 +118,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     jwt (1.5.2)
+    log_switch (0.4.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -144,6 +152,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pusher (0.15.2)
+      httpclient (~> 2.5)
+      multi_json (~> 1.0)
+      pusher-signature (~> 0.1.8)
+    pusher-signature (0.1.8)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -236,11 +249,13 @@ DEPENDENCIES
   figaro
   forecast_io
   gon
+  hue
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-facebook
   pg (~> 0.15)
   pry
+  pusher
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

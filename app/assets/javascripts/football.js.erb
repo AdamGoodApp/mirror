@@ -2,7 +2,7 @@ $( document ).ready(function() {
     function get_fixtures() {
         $.ajax({
             headers: { 'X-Auth-Token': 'a6ece2dbf05b48f58848a63ac3a4291c' },
-            url: 'http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n9',
+            url: 'http://api.football-data.org/v1/soccerseasons/398/fixtures?timeFrame=n1',
             dataType: 'json',
             type: 'GET'
         }).done(function(response) {

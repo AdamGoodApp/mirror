@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get 'photo' => 'photo_booth#index'
   match 'weather' => 'home#weather', :via => :get, :defaults => { :format => :json }
+  match 'lights-on' => 'home#lights_on', :via => :get, :defaults => { :format => :json }
+  match 'lights-off' => 'home#lights_off', :via => :get, :defaults => { :format => :json }
+  match 'fan-on' => 'home#fan_on', :via => :get, :defaults => { :format => :json }
+  match 'fan-off' => 'home#fan_off', :via => :get, :defaults => { :format => :json }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

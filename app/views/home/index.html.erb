@@ -4,7 +4,7 @@
     <div class="col-md-6"><%= render 'user' %></div>
   </div>
   <div class="row">
-    <div class="col-md-6"></div>
+    <div class="col-md-6"><%= render 'side_bar' %></div>
     <div class="col-md-6"><%= render 'football' if current_user.try(:name) == "Adam El Bishti"%></div>
   </div>
 </div>

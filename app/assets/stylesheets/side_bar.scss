@@ -1,0 +1,36 @@
+#side-bar {
+  font-size: 2em;
+}
+
+.light {
+  cursor: pointer;
+}
+
+.light-text {
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+
+span.light-text {
+  display: block;
+}
+
+.fa-lightbulb-o:before {
+  padding-left: 3px;
+  font-size: 1em;
+}
+
+#fan {
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 25px;
+
+  img {
+    padding-left: 3px;
+  }
+
+  p {
+    font-size: 0.5em;
+    margin-top: -7px;
+  }
+}
